@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Global Health &amp; AI | Division of Infectious Diseases | UBC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script defer src="scripts.js"></script>
+</head>
+<body id="top">
+
+<!-- =========================================================
+     UBC GLOBAL HEADER (CLF-style, navy with UBC signature)
+     ========================================================= -->
+<header class="ubc-masthead">
+  <div class="ubc-masthead-inner">
+    <a href="https://www.ubc.ca" class="ubc-signature" aria-label="The University of British Columbia">
+      <span class="ubc-signature-image"></span>
+    </a>
+    <button class="ubc-masthead-search" aria-label="Search">
+      <span class="ubc-search-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- =========================================================
+     FACULTY / DIVISION IDENTITY BAND  (sage green, like live)
+     ========================================================= -->
+<section class="id-band">
+  <div class="id-band-inner">
+    <div class="id-band-faculty">Faculty of Medicine</div>
+    <div class="id-band-unit">Division of Infectious Diseases | Department of Medicine</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PAGE TITLE
+     ========================================================= -->
+<section class="page-title">
+  <div class="page-title-inner">
+    <div class="page-title-eyebrow">Research Group</div>
+    <h1>Digital Global Health <span class="amp">&amp;</span> AI</h1>
+    <div class="page-title-formerly">formerly the mHealth Research Group</div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TAB STRIP (matches live: GOALS / MHEALTH / TEAM / WORKS)
+     ========================================================= -->
+<nav class="tab-strip" aria-label="Page sections">
+  <div class="tab-strip-inner">
+    <a href="#goals" class="tab-link active">GOALS</a>
+    <a href="#mhealth" class="tab-link">ABOUT</a>
+    <a href="#team" class="tab-link">TEAM</a>
+    <a href="#works" class="tab-link">WORKS</a>
+  </div>
+</nav>
+
+<!-- =========================================================
+     MAIN PAGE WRAP
+     ========================================================= -->
+<div class="page-wrap">
+  <div class="page-wrap-inner">
+
+    <!-- ============= MAIN ============= -->
+    <main class="page-main">
+
+      <!-- ===== HERO: tagline ===== -->
+      <section class="hero-mission reveal">
+        <img class="hero-mission-image" src="assets/hero-molecular.jpg" alt="" loading="eager">
+        <div class="hero-mission-overlay">
+          <h2 class="hero-mission-title">Our mission</h2>
+          <p class="hero-mission-text">
+            Advancing equitable health through digital innovation and applied artificial intelligence.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== GOALS ===== -->
+      <section class="block reveal" id="goals">
+        <h2>Our Goals</h2>
+        <div class="goals-grid">
+          <div class="goal-card">
+            <div class="goal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="12" r="3.5"/>
+                <circle cx="21" cy="12" r="3.5"/>
+                <path d="M5 24c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+                <path d="M15 24c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+              </svg>
+            </div>
+            <h3>Collaboration</h3>
+            <p>Foster collaborative, interdisciplinary mHealth research activities.</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 6L3 12l13 6 13-6-13-6z"/>
+                <path d="M8 14.5V21c0 2 4 4 8 4s8-2 8-4v-6.5"/>
+                <path d="M29 12v8"/>
+              </svg>
+            </div>
+            <h3>Opportunities</h3>
+            <p>Create opportunities for students, staff and faculty to participate in
+               interdisciplinary training in the area of mHealth.</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="16" r="11"/>
+                <path d="M5 16h22M16 5c3 3.5 4.5 7 4.5 11s-1.5 7.5-4.5 11M16 5c-3 3.5-4.5 7-4.5 11s1.5 7.5 4.5 11"/>
+              </svg>
+            </div>
+            <h3>Public Health</h3>
+            <p>Using mHealth interventions for international public health monitoring to optimize
+               patient care during complex emergencies, such as the COVID-19 pandemic and HIV epidemic.</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="4" width="14" height="24" rx="2.5"/>
+                <line x1="9" y1="9" x2="23" y2="9"/>
+                <line x1="9" y1="23" x2="23" y2="23"/>
+                <circle cx="16" cy="25.5" r=".8" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Technology</h3>
+            <p>Leverage AI technologies and conversational data collected by mHealth technologies
+               to capture patient priorities and inform care.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="block reveal" id="mhealth">
+        <h2>What we do</h2>
+        <div class="mhealth-grid">
+          <div class="mhealth-text">
+            <p>
+              The Digital Global Health and AI group, led by <strong>Dr. Richard Lester</strong>, conducts
+              rigorous research and data science to design, evaluate, and scale digital health
+              interventions for the world&rsquo;s most pressing health challenges. Our work bridges
+              patient-engagement technologies, real-world clinical data, and emerging AI methods, with a
+              particular focus on global infectious disease, maternal and child health, and underserved
+              populations in British Columbia, Rwanda, Kenya, Uganda, and beyond.
+            </p>
+            <p>
+              Building on more than a decade of mobile health (mHealth) research, including the WelTel
+              platform originally validated in HIV care in Kenya, we now apply natural language
+              processing (NLP), machine translation, and large language models to two-way
+              patient&ndash;provider communication data. These tools support real-time clinical
+              decision-making, surface emerging health issues at the population level, and extend access
+              to care in low-resource and multilingual settings.
+            </p>
+            <p>
+              Through methodologically rigorous trials, implementation science, and responsible AI
+              development, our goal is to translate digital innovation into measurable impact on patient
+              outcomes, equity, and health-system performance.
+            </p>
+          </div>
+          <figure class="mhealth-figure">
+            <!-- Designer-rendered illustration: two-way SMS with AI translation
+                 (per proposal §3.2, Option B - avoids consent issues) -->
+            <svg class="about-illustration" viewBox="0 0 360 280" aria-labelledby="about-ill-title" role="img">
+              <title id="about-ill-title">Two-way SMS communication with AI-supported translation</title>
+              <defs>
+                <linearGradient id="bg-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f4f6f8"/>
+                  <stop offset="100%" stop-color="#eaf1f9"/>
+                </linearGradient>
+              </defs>
+              <rect width="360" height="280" fill="url(#bg-gradient)"/>
+
+              <!-- Phone (left) -->
+              <g transform="translate(28,40)">
+                <rect width="100" height="200" rx="14" fill="#fff" stroke="#cfd5dc" stroke-width="1.5"/>
+                <rect x="6" y="12" width="88" height="160" rx="6" fill="#f7f9fb"/>
+                <circle cx="50" cy="186" r="5" fill="none" stroke="#cfd5dc" stroke-width="1.2"/>
+                <!-- patient SMS bubbles (Kinyarwanda) -->
+                <g>
+                  <rect x="14" y="22" width="64" height="20" rx="10" fill="#0055b7"/>
+                  <text x="46" y="36" text-anchor="middle" fill="#fff" font-family="Source Sans 3, sans-serif" font-size="9" font-weight="600">Mwaramutse</text>
+                </g>
+                <g>
+                  <rect x="14" y="50" width="74" height="20" rx="10" fill="#0055b7"/>
+                  <text x="51" y="64" text-anchor="middle" fill="#fff" font-family="Source Sans 3, sans-serif" font-size="9" font-weight="600">Ndi muzima</text>
+                </g>
+                <!-- provider reply -->
+                <g>
+                  <rect x="20" y="86" width="68" height="20" rx="10" fill="#e3e6ea"/>
+                  <text x="54" y="100" text-anchor="middle" fill="#002145" font-family="Source Sans 3, sans-serif" font-size="9" font-weight="600">Murakoze!</text>
+                </g>
+                <g>
+                  <rect x="20" y="114" width="62" height="20" rx="10" fill="#e3e6ea"/>
+                  <text x="51" y="128" text-anchor="middle" fill="#002145" font-family="Source Sans 3, sans-serif" font-size="9" font-weight="600">Muraho?</text>
+                </g>
+              </g>
+
+              <!-- AI translation node (centre) -->
+              <g transform="translate(160,110)">
+                <circle r="42" fill="#fff" stroke="#a8c08c" stroke-width="1.5"/>
+                <circle r="32" fill="none" stroke="#a8c08c" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/>
+                <text y="-4" text-anchor="middle" fill="#002145" font-family="Source Serif 4, serif" font-size="11" font-weight="700" letter-spacing=".06em">AI &middot; NLP</text>
+                <text y="12" text-anchor="middle" fill="#5a6b7e" font-family="Source Sans 3, sans-serif" font-size="9" letter-spacing=".06em">TRANSLATION</text>
+              </g>
+
+              <!-- connection lines: phone -> AI -->
+              <g stroke="#a8c08c" stroke-width="1.5" fill="none" stroke-linecap="round">
+                <path d="M132 80 Q150 90 156 105" opacity=".7"/>
+                <path d="M132 200 Q150 180 156 155" opacity=".7"/>
+              </g>
+              <g fill="#a8c08c">
+                <circle cx="132" cy="80" r="2.5"/>
+                <circle cx="132" cy="200" r="2.5"/>
+              </g>
+
+              <!-- Provider dashboard (right) -->
+              <g transform="translate(225,55)">
+                <rect width="115" height="170" rx="6" fill="#fff" stroke="#cfd5dc" stroke-width="1.5"/>
+                <rect x="0" y="0" width="115" height="22" rx="6" fill="#002145"/>
+                <text x="58" y="14" text-anchor="middle" fill="#fff" font-family="Source Sans 3, sans-serif" font-size="9" font-weight="700" letter-spacing=".08em">CLINICIAN VIEW</text>
+                <!-- translated message rows -->
+                <g font-family="Source Sans 3, sans-serif" font-size="8" fill="#1a1a1a">
+                  <rect x="8" y="32" width="99" height="22" rx="3" fill="#f4f6f8"/>
+                  <text x="14" y="44" font-weight="700" fill="#002145">Patient A</text>
+                  <text x="14" y="51" fill="#4a4a4a">"Good morning"</text>
+                  <rect x="8" y="60" width="99" height="22" rx="3" fill="#f4f6f8"/>
+                  <text x="14" y="72" font-weight="700" fill="#002145">Patient A</text>
+                  <text x="14" y="79" fill="#4a4a4a">"I am well"</text>
+                  <rect x="8" y="88" width="99" height="22" rx="3" fill="#fff4d6"/>
+                  <text x="14" y="100" font-weight="700" fill="#8a5a00">Triage flag</text>
+                  <text x="14" y="107" fill="#8a5a00">side-effects topic</text>
+                  <rect x="8" y="116" width="99" height="22" rx="3" fill="#f4f6f8"/>
+                  <text x="14" y="128" font-weight="700" fill="#002145">Patient B</text>
+                  <text x="14" y="135" fill="#4a4a4a">"Hello?"</text>
+                </g>
+                <!-- mini chart -->
+                <g transform="translate(8,148)">
+                  <rect x="0" y="0" width="99" height="14" rx="2" fill="#eaf1f9"/>
+                  <rect x="0" y="0" width="64" height="14" rx="2" fill="#0055b7"/>
+                  <text x="50" y="10" text-anchor="middle" fill="#fff" font-family="Source Sans 3, sans-serif" font-size="7" font-weight="700">65% RESPONSES TRIAGED</text>
+                </g>
+              </g>
+
+              <!-- AI -> dashboard connection -->
+              <g stroke="#a8c08c" stroke-width="1.5" fill="none" stroke-linecap="round">
+                <path d="M204 110 Q218 105 225 100" opacity=".7"/>
+                <path d="M204 130 Q218 145 225 160" opacity=".7"/>
+              </g>
+              <g fill="#a8c08c">
+                <circle cx="225" cy="100" r="2.5"/>
+                <circle cx="225" cy="160" r="2.5"/>
+              </g>
+            </svg>
+            <figcaption>Two-way patient&ndash;provider SMS, augmented with AI translation and topic-classification triage in the clinician dashboard.</figcaption>
+          </figure>
+        </div>
+
+        <!-- Where we work — interactive world map (Leaflet) -->
+        <div class="map-block">
+          <h3 class="sub-h3">Where we work</h3>
+          <div class="map-wrap">
+            <div id="world-map" class="world-map" aria-label="Interactive world map showing countries where the group conducts research"></div>
+            <ul class="map-legend">
+              <li><span class="legend-dot legend-dot-key"></span> East Africa &mdash; Kenya, Uganda, Rwanda, Ethiopia</li>
+              <li><span class="legend-dot"></span> North America &amp; Europe &mdash; Canada, USA, UK</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TEAM ===== -->
+      <section class="block reveal" id="team">
+        <h2>Team</h2>
+        <p class="block-intro">An interdisciplinary team of clinicians, data scientists, and global
+          health researchers, working across UBC, WelTel Health, and partner institutions.</p>
+
+        <div class="people-group-title">Faculty</div>
+        <div class="people-grid">
+          <article class="person">
+            <div class="person-photo"><span>RL</span></div>
+            <div class="person-info">
+              <div class="person-name">Dr. Richard Lester</div>
+              <div class="person-role">Faculty Researcher &middot; Group Lead</div>
+              <div class="person-creds">MD, FRCPC</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="people-group-title">Coordinator &amp; Postdoctoral Fellows</div>
+        <div class="people-grid">
+          <article class="person">
+            <div class="person-photo"><span>AA</span></div>
+            <div class="person-info">
+              <div class="person-name">Dr. Apoorva Anand</div>
+              <div class="person-role">Research Coordinator</div>
+              <div class="person-creds">PhD</div>
+            </div>
+          </article>
+          <article class="person">
+            <div class="person-photo"><span>SP</span></div>
+            <div class="person-info">
+              <div class="person-name">Dr. Shera Potka</div>
+              <div class="person-role">Postdoctoral Research Fellow</div>
+              <div class="person-creds">PhD</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="people-group-title">Doctoral Trainees</div>
+        <div class="people-grid">
+          <article class="person person-placeholder">
+            <div class="person-photo person-photo-empty"><span>JT</span></div>
+            <div class="person-info">
+              <div class="person-name">Justin Tuyisenge</div>
+              <div class="person-role">PhD Candidate (incoming)</div>
+              <div class="person-creds">CIRTA Wave 2 nominee</div>
+            </div>
+          </article>
+          <article class="person person-placeholder">
+            <div class="person-photo person-photo-empty"><span>VR</span></div>
+            <div class="person-info">
+              <div class="person-name">Valens Rwema</div>
+              <div class="person-role">PhD Candidate (incoming)</div>
+              <div class="person-creds">CIRTA Wave 2 nominee</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="people-group-title">Affiliated Faculty &amp; Collaborators</div>
+        <ul class="affiliated-list">
+          <li><strong>Dr. Gabby Serafini</strong> &middot; Chief Executive Officer, WelTel Health</li>
+          <li><strong>Rwanda Biomedical Centre</strong> &middot; Ministry of Health collaborators</li>
+          <li><strong>UBC Neglected Global Diseases Initiative (NGDI)</strong></li>
+        </ul>
+      </section>
+
+      <!-- ===== WORKS ===== -->
+      <section class="block reveal" id="works">
+        <h2>Works</h2>
+
+        <h3 class="sub-h3">Featured projects</h3>
+        <div class="projects-grid">
+          <article class="project">
+            <div class="project-tag">Patient engagement</div>
+            <h3>WelTel</h3>
+            <p>SMS-based patient engagement platform supporting HIV care, mental health,
+               COVID-19 follow-up, and chronic disease management across multiple countries.</p>
+            <div class="project-meta">Canada &middot; Kenya &middot; Rwanda &middot; Uganda</div>
+          </article>
+
+          <article class="project">
+            <div class="project-tag project-tag-ai">AI &amp; NLP</div>
+            <h3>Smart Text Analytic Tools (STAT)</h3>
+            <p>AI-supported triage of two-way patient&ndash;provider messages using natural language
+               processing and large language models, including machine translation for multilingual care.</p>
+            <div class="project-meta">Lead platform &middot; Active</div>
+          </article>
+
+          <article class="project">
+            <div class="project-tag">CHW digital health</div>
+            <h3>Rwanda CHW Digital Health Programme</h3>
+            <p>Cluster-randomised trial evaluating digital learning and decision support for community
+               health workers, in collaboration with the Rwanda Biomedical Centre.</p>
+            <div class="project-meta">Rwanda &middot; RBC partnership</div>
+          </article>
+
+          <article class="project">
+            <div class="project-tag">BC clinical</div>
+            <h3>Hospital-to-Home (H2home)</h3>
+            <p>mHealth-supported transitions of care for high-risk patients in British Columbia,
+               integrating SMS check-ins with discharge pathways.</p>
+            <div class="project-meta">BC &middot; VCH &middot; Providence</div>
+          </article>
+
+          <article class="project">
+            <div class="project-tag">Maternal &amp; child health</div>
+            <h3>MNCH Digital Programmes</h3>
+            <p>Multilingual mobile interventions to improve coverage and retention along the maternal,
+               neonatal and child health cascade.</p>
+            <div class="project-meta">Rwanda &middot; MOH-NHIC partnership</div>
+          </article>
+
+          <article class="project project-archive-card">
+            <h3>Past Projects Archive</h3>
+            <p>Asthma + Tele-health, EmPhAsIS, WelTel Big River, OakTree, PEP, LTBI, Outreach,
+               Haida Gwaii, Kenya2, Retain, GCC and others.</p>
+            <a class="archive-link" href="#">View all current &amp; past projects &rarr;</a>
+          </article>
+        </div>
+
+        <h3 class="sub-h3 sub-h3-mt">Featured publications</h3>
+        <ol class="pub-list">
+          <li class="reveal">
+            <div class="pub-meta">
+              <span class="pub-journal">The Lancet</span>
+              <span class="pub-year">2010</span>
+            </div>
+            <div class="pub-title">Effects of a mobile phone short message service on antiretroviral treatment adherence in Kenya (WelTel Kenya1): a randomised trial.</div>
+            <div class="pub-authors">Lester RT, Ritvo P, Mills EJ, Kariri A, Karanja S, Chung MH, Jack W, Habyarimana J, Sadatsafavi M, Najafzadeh M, Marra CA, Estambale B, Ngugi E, Ball TB, Thabane L, Gelmon LJ, Kimani J, Ackers M, Plummer FA.</div>
+            <div class="pub-summary">The foundational trial showing two-way SMS support improves HIV outcomes &mdash; a defining piece of evidence in the global mHealth field. <a href="https://pubmed.ncbi.nlm.nih.gov/21071074/" target="_blank" rel="noopener">PMID 21071074</a></div>
+          </li>
+          <li class="reveal">
+            <div class="pub-meta">
+              <span class="pub-journal">The Lancet Public Health</span>
+              <span class="pub-year">2018</span>
+            </div>
+            <div class="pub-title">Effect of an interactive text-messaging service on patient retention during the first year of HIV care in Kenya (WelTel Retain): an open-label, randomised parallel-group study.</div>
+            <div class="pub-authors">van der Kop ML, Muhula S, Nagide PI, Thabane L, Gelmon L, Awiti PO, Abunah B, Kyomuhangi LB, Budd MA, Marra C, Patel A, Karanja S, Ojakaa DI, Mills E, Ekstr&ouml;m AM, Lester RT.</div>
+            <div class="pub-summary">An RCT showing that two-way SMS support also improves retention in HIV care during the critical first year after diagnosis. <a href="https://pubmed.ncbi.nlm.nih.gov/29361433/" target="_blank" rel="noopener">PMID 29361433</a></div>
+          </li>
+          <li class="reveal">
+            <div class="pub-meta">
+              <span class="pub-journal">PLOS ONE</span>
+              <span class="pub-year">2017</span>
+            </div>
+            <div class="pub-title">Operationalizing mHealth to improve patient care: a qualitative implementation science evaluation of the WelTel texting intervention in Canada and Kenya.</div>
+            <div class="pub-authors">Smillie K, Van Borek N, Kop ML, Lukhwaro A, Li N, Karanja S, Patel AR, Ojakaa D, Lester RT.</div>
+            <div class="pub-summary">Implementation-science evaluation across six WelTel sites in Canada and Kenya, identifying the contextual factors that drive successful real-world deployment. <a href="https://pubmed.ncbi.nlm.nih.gov/29208026/" target="_blank" rel="noopener">PMID 29208026</a></div>
+          </li>
+          <li class="reveal">
+            <div class="pub-meta">
+              <span class="pub-journal">npj Digital Medicine</span>
+              <span class="pub-status">Submitted, 2026</span>
+            </div>
+            <div class="pub-title">Optimising supervised and unsupervised topic classification of patient&ndash;provider SMS dialogues in a multilingual care platform.</div>
+            <div class="pub-authors">Potka S, Anand A, &hellip; Lester RT.</div>
+            <div class="pub-summary">Methods paper showing how NLP can surface the topics patients actually raise with providers, at scale.</div>
+          </li>
+          <li class="reveal">
+            <div class="pub-meta">
+              <span class="pub-journal">The Lancet Digital Health</span>
+              <span class="pub-status pub-status-prep">Manuscript in preparation, 2026</span>
+            </div>
+            <div class="pub-title">Machine translation of low-resource African languages for two-way patient&ndash;provider communication.</div>
+            <div class="pub-authors">Potka S, &hellip; Lester RT.</div>
+            <div class="pub-summary">Evaluates whether modern MT systems are clinically usable for Kinyarwanda&ndash;English in a real WelTel deployment.</div>
+          </li>
+        </ol>
+        <a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=Lester+RT" target="_blank" rel="noopener">View all publications on PubMed &rarr;</a>
+
+        <h3 class="sub-h3 sub-h3-mt">About WelTel</h3>
+        <p class="block-intro">A short overview of the WelTel platform and its origins in HIV care
+           research in Kenya.</p>
+        <div class="video-frame reveal">
+          <button class="video-thumb" type="button" data-video="dQw4w9WgXcQ" aria-label="Play WelTel overview video">
+            <div class="video-play" aria-hidden="true">&#9654;</div>
+            <div class="video-label">YouTube &middot; WelTel</div>
+          </button>
+          <div class="video-caption">WelTel: connecting patients and providers through SMS &middot; 3:24</div>
+        </div>
+      </section>
+
+      <!-- ===== PARTNERS ===== -->
+      <section class="block reveal" id="partners">
+        <h2>Partners</h2>
+        <p class="block-intro">We work with health authorities, academic institutions, and a
+          federally regulated digital health company.</p>
+        <div class="partners-grid">
+          <div class="partner-tile">
+            <div class="partner-mark">WT</div>
+            <div class="partner-name">WelTel Health</div>
+          </div>
+          <div class="partner-tile">
+            <div class="partner-mark">RBC</div>
+            <div class="partner-name">Rwanda Biomedical Centre</div>
+          </div>
+          <div class="partner-tile">
+            <div class="partner-mark">NGDI</div>
+            <div class="partner-name">UBC Neglected Global Diseases Initiative</div>
+          </div>
+          <div class="partner-tile">
+            <div class="partner-mark">VCH</div>
+            <div class="partner-name">Vancouver Coastal Health</div>
+          </div>
+          <div class="partner-tile">
+            <div class="partner-mark">PHC</div>
+            <div class="partner-name">Providence Health Care</div>
+          </div>
+          <div class="partner-tile">
+            <div class="partner-mark">MoH</div>
+            <div class="partner-name">Rwanda Ministry of Health</div>
+          </div>
+        </div>
+        <div class="partner-disclaimer">Partner names shown as placeholders; final page will use approved logos.</div>
+      </section>
+
+      <!-- ===== NEWS ===== -->
+      <section class="block reveal" id="news">
+        <h2>News &amp; Recent Activity</h2>
+        <ul class="news-list">
+          <li>
+            <div class="news-date">Apr 2026</div>
+            <div class="news-body">
+              <div class="news-tag">Grant</div>
+              <div class="news-title">CIHR Project Grant submission &mdash; <em>Listening at Scale</em>: AI-supported analysis of patient&ndash;provider communication in low-resource settings.</div>
+            </div>
+          </li>
+          <li>
+            <div class="news-date">Apr 2026</div>
+            <div class="news-body">
+              <div class="news-tag">Trial</div>
+              <div class="news-title">e-Bumenyi cluster-randomised trial of digital learning for Rwandan community health workers entered protocol finalisation with the Rwanda Biomedical Centre.</div>
+            </div>
+          </li>
+          <li>
+            <div class="news-date">Mar 2026</div>
+            <div class="news-body">
+              <div class="news-tag">Publication</div>
+              <div class="news-title">Topic-classification paper accepted for revision at <em>npj Digital Medicine</em>.</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ===== GET INVOLVED ===== -->
+      <section class="block reveal" id="get-involved">
+        <h2>Get Involved</h2>
+        <div class="cta-grid">
+          <div class="cta-card">
+            <h3>Prospective Graduate Students</h3>
+            <p>Please review our research priorities and admissions expectations before contacting
+               the group. We receive a high volume of inquiries and screen for fit with current projects.</p>
+            <a href="#" class="cta-button">Read our admissions guidance &rarr;</a>
+          </div>
+          <div class="cta-card cta-card-alt">
+            <h3>Research Collaborators &amp; Partners</h3>
+            <p>For partnership inquiries, data-sharing agreements, and joint funding applications,
+               please contact our Research Coordinator.</p>
+            <a href="mailto:apoorva.anand@ubc.ca" class="cta-button cta-button-alt">Contact Dr. Apoorva Anand &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== AI in ID Initiative cross-link ===== -->
+      <section class="block">
+        <div class="crosslink-card">
+          <div class="crosslink-text">
+            <div class="crosslink-eyebrow">Related Divisional Initiative</div>
+            <h3>AI in Infectious Diseases</h3>
+            <p>A Division-wide initiative led by Dr. Richard Lester to coordinate responsible AI
+               research and clinical translation across infectious-disease groups at UBC.</p>
+          </div>
+          <a href="#" class="crosslink-button">Visit the initiative page &rarr;</a>
+        </div>
+      </section>
+
+      <!-- ===== COI ===== -->
+      <section class="block block-coi">
+        <h3>Conflict of Interest Statement</h3>
+        <p>
+          Dr. Richard Lester is the founder of and a shareholder in WelTel Incorporated, a federally
+          regulated Canadian digital health company that is referenced in the research described on
+          this page. This relationship is fully disclosed to the University of British Columbia and to
+          all relevant research ethics boards, funders, and journals, and conflict-of-interest
+          management plans are in place for studies in which WelTel Incorporated is a partner.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ============= SIDEBAR ============= -->
+    <aside class="page-sidebar" aria-label="Section sidebar">
+
+      <div class="side-block">
+        <div class="side-title">On this page</div>
+        <ul class="side-links">
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="#mhealth">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#news">News &amp; Recent Activity</a></li>
+          <li><a href="#get-involved">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Faculty Researcher</div>
+        <div class="faculty-block-side">
+          <div class="faculty-name">Dr. Richard Lester</div>
+          <div class="faculty-meta">MD, FRCPC &middot; Group Lead</div>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Current Projects</div>
+        <ul class="accordion">
+          <li><details><summary>STAT &mdash; Smart Text Analytic Tools</summary></details></li>
+          <li><details><summary>COVID-19 Public Health Monitoring</summary></details></li>
+          <li><details><summary>WelTel Pediatric Cardiology</summary></details></li>
+          <li><details><summary>Virtual Mental Health Care</summary></details></li>
+          <li><details><summary>Hospital-to-Home (H2home)</summary></details></li>
+          <li><details><summary>Cedar Project</summary></details></li>
+          <li><details><summary>Maternal, Neonatal &amp; Child Health (MNCH)</summary></details></li>
+          <li><details><summary>Implementation Science</summary></details></li>
+        </ul>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Past Projects</div>
+        <ul class="accordion">
+          <li><details><summary>Asthma + Tele-health</summary></details></li>
+          <li><details><summary>EmPhAsIS</summary></details></li>
+          <li><details><summary>WelTel Big River</summary></details></li>
+          <li><details><summary>OakTree</summary></details></li>
+          <li><details><summary>PEP</summary></details></li>
+          <li><details><summary>LTBI</summary></details></li>
+          <li><details><summary>Outreach</summary></details></li>
+          <li><details><summary>Haida Gwaii</summary></details></li>
+          <li><details><summary>Kenya2</summary></details></li>
+          <li><details><summary>Retain</summary></details></li>
+          <li><details><summary>GCC</summary></details></li>
+        </ul>
+      </div>
+
+      <div class="side-block side-block-pubs">
+        <div class="side-title">Publications</div>
+        <p>View Dr. Lester&rsquo;s publications on PubMed.</p>
+        <a href="#" class="side-link-button">Open PubMed &rarr;</a>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<!-- =========================================================
+     DIVISION CONTACT BLOCK (page-foot)
+     ========================================================= -->
+<section class="contact-strip">
+  <div class="contact-strip-inner">
+    <div class="contact-block">
+      <div class="contact-title"><strong>Division of Infectious Diseases | Department of Medicine</strong></div>
+      <div class="contact-row"><a href="#">Faculty of Medicine</a></div>
+      <div class="contact-row">328C, Heather Pavilion, VGH</div>
+      <div class="contact-row">2733 Heather Street</div>
+      <div class="contact-row">Vancouver, BC Canada V5Z 3J5</div>
+      <div class="contact-row">Tel <a href="tel:+16048754588">604 875 4588</a></div>
+      <div class="contact-row">Fax 604 875 4013</div>
+      <div class="contact-row">Website <a href="#">id.med.ubc.ca</a></div>
+      <a class="back-to-top" href="#top">Back to top &uarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     UBC GLOBAL FOOTER (matches live id.med.ubc.ca)
+     ========================================================= -->
+<footer class="ubc-footer">
+  <div class="ubc-footer-top">
+    <div class="ubc-footer-inner">
+      <div class="ubc-footer-brand">
+        <a href="https://www.ubc.ca" class="ubc-signature ubc-signature-stack" aria-label="The University of British Columbia">
+          <span class="ubc-signature-image"></span>
+        </a>
+      </div>
+
+      <div class="ubc-footer-col">
+        <h4>About UBC</h4>
+        <ul>
+          <li><a href="#">Contact UBC</a></li>
+          <li><a href="#">About the University</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Make a Gift</a></li>
+          <li><a href="#">Search UBC.ca</a></li>
+        </ul>
+      </div>
+
+      <div class="ubc-footer-col">
+        <h4>UBC Campuses</h4>
+        <ul>
+          <li><a href="#">Vancouver Campus</a></li>
+          <li><a href="#">Okanagan Campus</a></li>
+        </ul>
+        <h4 class="mt">UBC Sites</h4>
+        <ul>
+          <li><a href="#">Robson Square</a></li>
+          <li><a href="#">Centre for Digital Media</a></li>
+          <li><a href="#">Faculty of Medicine Across BC</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ubc-footer-bottom">
+    <div class="ubc-footer-inner">
+      <ul class="ubc-footer-policy">
+        <li><a href="#">Emergency Procedures</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Copyright</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <div class="ubc-footer-mock">Internal review mock-up &middot; not the live UBC page</div>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     VIDEO MODAL (lazy-loads YouTube iframe on click)
+     ========================================================= -->
+<div class="video-modal" id="video-modal" hidden aria-hidden="true">
+  <div class="video-modal-backdrop" data-close></div>
+  <div class="video-modal-frame" role="dialog" aria-modal="true" aria-label="Video">
+    <button class="video-modal-close" type="button" data-close aria-label="Close video">&times;</button>
+    <div class="video-modal-iframe" id="video-modal-iframe"></div>
+  </div>
+</div>
+
+</body>
+</html>
