@@ -1,23 +1,12 @@
-# Digital Global Health & AI — website mockup
+# Global Health & AI Lab: website
 
-Internal mock-up of the proposed *Digital Global Health & AI* sub-page (formerly the **mHealth Research Group**) for the UBC Division of Infectious Diseases website refresh.
+Static, interactive lab website (no build step). Open `index.html` via any static server, or GitHub Pages.
 
-**Not the live UBC page.** This is a static prototype used to communicate the proposed structure and visual direction to the group lead before formal feedback to Ingeborg Brown.
+- `index.html`: page structure
+- `styles.css`: design tokens, light/dark themes, layout
+- `scripts.js`: hero network animation, demo pipeline, filters, profile/project popups, publication explorer, map
+- `data.js`: team profiles, projects, timeline, news (edit content here)
+- `publications.js`: all PubMed records for `Lester RT[au]` with one-line summaries
+- `assets/team/`: headshots from the member profile forms
 
-Live preview: https://sherapotka.github.io/dghai-mockup/
-
-## What's in here
-
-- `index.html` — the proposed sub-page
-- `styles.css` — UBC CLF-aligned styling
-- `scripts.js` — Leaflet map, scrollspy, reveal animations, video modal
-- `assets/` — UBC official signature (extracted from CLF7 sprite), hero illustration
-
-## Notes for reviewers
-
-- Hero photo is a placeholder; the proposal recommends a designer-rendered visual.
-- Person photos are initialed placeholders.
-- Partner logos are grayscale monogram placeholders.
-- The "Where we work" map is interactive (Leaflet + CARTO Positron).
-
-Built April 2026 by Shera Potka.
+Team bios are taken verbatim from the member profile forms (Oct 2026).
