@@ -67,7 +67,7 @@ window.TEAM = [
       ['MSc, Media and Computer Science', 'University of Cologne, Germany'],
       ['BSc, Media and Computer Science', 'University of Cologne, Germany']
     ],
-    links: { ORCID: 'https://orcid.org/0009-0003-4341-5986' }
+    links: { ORCID: 'https://orcid.org/0009-0003-4341-5986', LinkedIn: 'https://www.linkedin.com/in/shera-potka/', GitHub: 'https://github.com/sherapotka' }
   },
   {
     id: 'housna-umutoni',
