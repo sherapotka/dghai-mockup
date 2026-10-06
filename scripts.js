@@ -223,26 +223,6 @@
     const state = { q: '', year: null, topic: 'All', type: '', sort: 'new', featured: false, shown: 15 };
     const PAGE = 15;
 
-    // year chart
-    const years = PUBS.map(p => p.year).filter(Boolean);
-    const y0 = Math.min(...years), y1 = Math.max(...years);
-    const counts = {};
-    years.forEach(y => counts[y] = (counts[y] || 0) + 1);
-    const max = Math.max(...Object.values(counts));
-    const chart = $('#pub-chart');
-    const yrs = []; for (let y = y0; y <= y1; y++) yrs.push(y);
-    chart.innerHTML = yrs.map(y => `<button type="button" class="bar ${counts[y] ? 'has' : ''}" data-y="${y}" style="height:0" aria-label="${y}: ${counts[y] || 0} papers" ${counts[y] ? '' : 'disabled'}>
-      <span class="bar-tip">${y} · ${counts[y] || 0} paper${counts[y] === 1 ? '' : 's'}</span><span class="bar-y">${y % 2 === 0 || yrs.length < 14 ? y : ''}</span></button>`).join('');
-    const growBars = () => $$('.bar', chart).forEach(b => b.style.height = ((counts[b.dataset.y] || 0) / max * 100) + '%');
-    new IntersectionObserver(([e], o) => { if (e.isIntersecting) { growBars(); o.disconnect(); } }).observe(chart);
-    chart.addEventListener('click', e => {
-      const b = e.target.closest('.bar'); if (!b || b.disabled) return;
-      const y = +b.dataset.y;
-      state.year = state.year === y ? null : y;
-      $$('.bar', chart).forEach(x => x.classList.toggle('sel', +x.dataset.y === state.year));
-      state.shown = PAGE; render();
-    });
-
     // topics
     const topicCounts = {};
     PUBS.forEach(p => p.topics.forEach(t => topicCounts[t] = (topicCounts[t] || 0) + 1));
@@ -260,7 +240,6 @@
     $('#pub-reset').addEventListener('click', () => {
       Object.assign(state, { q: '', year: null, topic: 'All', type: '', featured: false, shown: PAGE });
       $('#pub-search').value = ''; typeSel.value = ''; $('#pub-featured').checked = false;
-      $$('.bar', chart).forEach(x => x.classList.remove('sel'));
       $$('#pub-topics .chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.v === 'All'));
       render();
     });
